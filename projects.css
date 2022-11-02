@@ -1,0 +1,115 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+.header{
+    color: blueviolet;
+    background-color: black;
+    /* margin: 0px;
+    padding: 0px;
+    border: 0px; */
+    height: 20%;
+    width: 100%;
+    position: fixed;
+}
+#aa{
+    font-size: 50px;
+    margin-top: 50%;
+    padding-top: 20%;
+}
+.nmn{
+    margin-top: 3%;
+    padding-left: 3%;
+    /* background-color: red; */
+    color: white;
+}
+.hdr2{
+    color: white;
+    /* background-color: blue; */
+    /* padding-left: 10%; */
+    left: 70%;
+    /* margin-top: 2px; */
+    /* top: 20%; */
+    width: 30%;
+    /* padding-top: 1%; */
+    top: 7%;
+    /* bottom: 5%; */
+    position: absolute;
+    display: flex;
+    
+}
+.bdy{
+    color: aqua;
+    /* background-image:url(black.jpg); */
+    background-color: white;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 80%;
+    width: 100%;
+    top: 20%;
+    position: fixed;
+    /* text-align: center; */
+}
+#ujji{
+    /* background-color: red; */
+    top: 25%;
+    left: 50%;
+    position: fixed;
+    color: black;
+    /* align-items: center; */
+    
+
+}
+#ujji2{
+    color: black;
+    top: 82%;
+    left: 18%;
+    position: fixed;
+    font-size: 20px;
+    padding-right: 5%;
+    /* align-items: center; */
+}
+.bdy2{
+    color: brown;
+    top: 90%;
+    position: fixed;
+}
+#bttn{
+    width: 10%;
+    height: 5%;
+    top: 70%;
+    left: 60%;
+    position: fixed;
+    background-color:#3C2317;
+    color: wheat;
+    border-radius: 3px;
+}
+#bttn2{
+    width: 8%;
+    height: 5%;
+    top: 70%;
+    left: 40%;
+    position: fixed;
+    background-color:#3C2317;
+    border-radius: 3px;
+    color: wheat;
+}
+#bttn:hover{
+    background-color: #070d0d;
+}
+#bttn2:hover{
+    background-color: #070d0d;
+}
+#profile_pic{
+    width: 36%;
+    left: 10%;
+    position: fixed;
+    top: 20%;
+}
+hr{
+    color: blue;
+    width: 30%;
+    position: fixed;
+}
