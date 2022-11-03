@@ -1,17 +1,50 @@
 <?php
+// if(!empty($_POST['submit1']))
+// {
+
+
+// Create connection
+$conn=mysqli_connect('localhost','root','','personal_website');
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+// echo "Connected successfully";
 if(isset($_POST["submit1"]))
 {
   $uname=$_POST['uname'];
   $pword=$_POST['pwd'];
-  if($uname=='admin' && $pword=='admin@123' )
+  $query="select * from Person_Details where Username='$uname' and  Password='$pword'";
+  $result=mysqli_query($conn,$query);
+  $count=mysqli_num_rows($result);
+  if($count>0)
   {
-    header('Location:success.html');
+    session_start();
+    $cookie_name = "user";
+    $cookie_value = $uname;
+    setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+    if(!isset($_COOKIE[$cookie_name])) {
+      echo "Cookie named '" . $cookie_name . "' is not set!";
+  } else {
+      date_default_timezone_set("Asia/Kolkata");
+      $dt= date("h:i:sa");
+      echo '<script type="text/JavaScript"> 
+      alert("Cookie Is Set For ' . $_COOKIE[$cookie_name] .' For 30 Days At Time ' . $dt . ' "); 
+      alert(" ' . $uname .' ,Your Session Is Started");
+       window.location.replace("success.html");
+      </script>';
+  }    
   }
   else
   {
+    // echo "Login unsucessful";
     header('Location:unsucessful.html');
   }
+    // header('Location:index.php');
 }
+// }
+
 ?>
 
 <!DOCTYPE html>
